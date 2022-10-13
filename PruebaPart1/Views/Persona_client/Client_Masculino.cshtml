@@ -13,7 +13,7 @@
 
 
 
-<h1>Consulta</h1>
+<h1 style="text-align:center">Lista clientes masculinos</h1>
 
 
 <table class="table">
@@ -54,7 +54,7 @@
     </thead>
     <tbody>
         <p>
-            <h1>  Solo puedes ver resultados si tienes mas de 10 personas registradas  </h1>
+            <h4  style="color:crimson">  Recuerda que solo puedes ver resultados si tienes mas de 10 personas registradas  </h4>
         </p>
         
         @foreach (var item in Model)
@@ -99,9 +99,9 @@
                             @Html.DisplayFor(modelItem => item.Genero)
                         </td>
                         <td>
-                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
                         </td>
                     </tr>
                 }
@@ -114,7 +114,11 @@
         }
 
         <div>
-            <h1> La cantidad de registros con genero masculino son: @cantMasculino y estan listados a continuacion</h1>
+            <h4> La cantidad de registros con genero masculino encontrados son: @cantMasculino y estan listados a continuacion</h4>
+        </div>
+
+        <div class="mt-3">
+            <a asp-action="Index">Volver a atrás</a>
         </div>
     </tbody>
 </table>

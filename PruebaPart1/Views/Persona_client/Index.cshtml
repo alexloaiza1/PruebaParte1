@@ -19,6 +19,9 @@
     <a asp-action="Client_Femenino">Ver los clientes Mujeres (Femenino)</a>
 </p>
 
+<p>
+    <a asp-action="MayorEdad">Persona con mayor edad</a>
+</p>
 
 
 <table class="table">
@@ -39,21 +42,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.segundoApellido)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefono)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Direccion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Edad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Genero)
-            </th>
+            
             <th></th>
         </tr>
     </thead>
@@ -63,7 +52,7 @@
 
 
 
-        <h1 style="text-align:center">Lista de todos los clientes registrados</h1>
+        <h1 style="text-align:center">Nombre completo de clientes registrados</h1>
 
 @foreach (var item in Model) {
                 <tr>
@@ -82,25 +71,11 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.segundoApellido)
                     </td>
+                   
                     <td>
-                        @Html.DisplayFor(modelItem => item.Telefono)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Email)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Direccion)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Edad)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Genero)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
                     </td>
                 </tr>
     

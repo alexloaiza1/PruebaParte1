@@ -1,0 +1,26 @@
+﻿@model IEnumerable<PruebaPart1.Models.Persona_client>
+
+
+
+
+
+@{
+    ViewData["Title"] = "Client_Femenino";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var cantlista = (ICollection<Persona_client>)Model;
+    var aux=0;
+    String nombreCompleto = "";
+}
+
+
+@foreach (var item in Model){
+    @if(item.Edad>aux){
+        aux = item.Edad;
+        nombreCompleto = item.primerNombre +" "+ item.segundoNombre +" "+ item.primerApellido +" " + item.segundoApellido;
+    }
+}
+
+
+<div>
+    <h4> La persona registrada con mayor edad es: @nombreCompleto </h4>
+</div>

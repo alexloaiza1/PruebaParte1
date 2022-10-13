@@ -39,6 +39,14 @@ namespace PruebaPart1.Controllers
         }
 
 
+        // GET: Client_Femenino
+        public async Task<IActionResult> MayorEdad()
+        {
+            return View(await _context.Persona_cliente.ToListAsync());
+        }
+
+
+
         // GET: Persona_client/Details/5
         public async Task<IActionResult> Details(int? id)
         {
