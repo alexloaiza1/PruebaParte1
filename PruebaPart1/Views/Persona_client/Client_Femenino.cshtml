@@ -5,10 +5,10 @@
 
 
 @{
-    ViewData["Title"] = "Interacciones";
+    ViewData["Title"] = "Client_Femenino";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var cantlista = (ICollection<Persona_client>)Model;
-    var cantMasculino=0;
+    var cantFemenino = 0;
 }
 
 
@@ -56,17 +56,18 @@
         <p>
             <h1>  Solo puedes ver resultados si tienes mas de 10 personas registradas  </h1>
         </p>
-        
+
         @foreach (var item in Model)
         {
-            @if(cantlista.Count>2){
-                @if (item.Genero == "Masculino")
+            @if (cantlista.Count > 2)
+            {
+                @if (item.Genero == "Femenino")
                 {
-                    cantMasculino++;
+                    cantFemenino++;
 
 
-                  
-                    
+
+
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Documento)
@@ -108,13 +109,13 @@
             }
 
 
-           
+
 
 
         }
 
         <div>
-            <h1> La cantidad de registros con genero masculino son: @cantMasculino y estan listados a continuacion</h1>
+            <h1> La cantidad de registros con genero Femenino son: @cantFemenino y estan listadas a continuacion</h1>
         </div>
     </tbody>
 </table>

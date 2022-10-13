@@ -5,15 +5,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1 style="text-align:center">Bienvenido al Manejador de Clientes </h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Nuevo Registro</a>
 </p>
 
 <p>
-    <a asp-action="Interacciones">Interacciones</a>
+    <a asp-action="Client_Masculino">Ver los clientes Hombres (Masculino)</a>
 </p>
+
+<p>
+    <a asp-action="Client_Femenino">Ver los clientes Mujeres (Femenino)</a>
+</p>
+
 
 
 <table class="table">
@@ -56,6 +61,10 @@
 
 
 
+
+
+        <h1 style="text-align:center">Lista de todos los clientes registrados</h1>
+
 @foreach (var item in Model) {
                 <tr>
                     <td>
@@ -89,9 +98,9 @@
                         @Html.DisplayFor(modelItem => item.Genero)
                     </td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
                     </td>
                 </tr>
     

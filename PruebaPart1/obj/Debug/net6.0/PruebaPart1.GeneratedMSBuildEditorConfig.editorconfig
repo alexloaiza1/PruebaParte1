@@ -23,6 +23,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/alex2/source/repos/PruebaPart1/PruebaPart1/Views/Persona_client/Client_Femenino.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYV9jbGllbnRcQ2xpZW50X0ZlbWVuaW5vLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alex2/source/repos/PruebaPart1/PruebaPart1/Views/Persona_client/Client_Masculino.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYV9jbGllbnRcQ2xpZW50X01hc2N1bGluby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/alex2/source/repos/PruebaPart1/PruebaPart1/Views/Persona_client/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYV9jbGllbnRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -41,10 +49,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/alex2/source/repos/PruebaPart1/PruebaPart1/Views/Persona_client/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYV9jbGllbnRcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/alex2/source/repos/PruebaPart1/PruebaPart1/Views/Persona_client/Interacciones.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYV9jbGllbnRcSW50ZXJhY2Npb25lcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/alex2/source/repos/PruebaPart1/PruebaPart1/Views/Shared/Error.cshtml]
