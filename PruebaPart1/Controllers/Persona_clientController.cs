@@ -25,6 +25,14 @@ namespace PruebaPart1.Controllers
               return View(await _context.Persona_cliente.ToListAsync());
         }
 
+
+        // GET: Persona_client
+        public async Task<IActionResult> Interacciones()
+        {
+            return View(await _context.Persona_cliente.ToListAsync());
+        }
+
+
         // GET: Persona_client/Details/5
         public async Task<IActionResult> Details(int? id)
         {
