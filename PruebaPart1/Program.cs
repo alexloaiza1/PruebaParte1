@@ -1,4 +1,16 @@
+using PruebaPart1.Data;
+
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+// Configuro la cadena de conexion a SQLServer 
+builder.Services.AddDbContext<AppDBContex>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionSqlServer"))
+);
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
