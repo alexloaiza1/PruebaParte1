@@ -5,26 +5,61 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 style="text-align:center">Bienvenido al Manejador de Clientes </h1>
 
-<p>
-    <a asp-action="Create">Nuevo Registro</a>
-</p>
-
-<p>
-    <a asp-action="Client_Masculino">Ver los clientes Hombres (Masculino)</a>
-</p>
-
-<p>
-    <a asp-action="Client_Femenino">Ver los clientes Mujeres (Femenino)</a>
-</p>
-
-<p>
-    <a asp-action="MayorEdad">Persona con mayor edad</a>
-</p>
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<h1 class="mt-3" style="text-align:center ">Bienvenido al Manejador de Clientes </h1>
 
 
-<table class="table">
+<div class=" container mt-5">
+    <div class="row">
+    <div class="col ">
+           
+
+            <img type="image"  src="~/images/agregar.png"  alt="text"  width="180" >
+            <button class=" btn btn-light mt-2"> <a class="subrayado" asp-action="Create"> <h6>Nuevo Registro</h6></a>  </button>
+            
+    </div>
+
+    <div class="col ">
+        
+                <img type="image" src="~/images/perfil.png" alt="text" width="180">
+
+                <button class="btn btn-light mt-2"><a class="subrayado" asp-action="Client_Masculino"> <h6> Resultados Hombres</h6></a>  </button>
+                
+            
+    </div>
+
+
+    <div class="col ">
+
+            <h4>
+                <img type="image" src="~/images/mujer.png" alt="text" width="180">
+                <button class="btn btn-light mt-2"><a class="subrayado" asp-action="Client_Femenino"> <h6> Resultados Mujeres</h6></a>  </button>
+            </h4>
+    </div>
+
+    <div class="col ">
+            
+
+        <h4>
+                <img type="image" src="~/images/abuelos.png" alt="text" width="180">
+                <button class="btn btn-light mt-2"><a class="subrayado" asp-action="MayorEdad"> <h6> Resultados Mayor Edad</h6></a>  </button>
+            </h4>
+
+            </h4>
+                
+    
+    </div>
+
+     
+    </div>
+
+
+</div>
+
+
+
+<table class="table mt-3">
     <thead>
         <tr>
             <th>
@@ -52,7 +87,7 @@
 
 
 
-        <h1 style="text-align:center">Nombre completo de clientes registrados</h1>
+ <h1 class="mt-5" style="text-align:center">Nombre completo de clientes registrados</h1>
 
 @foreach (var item in Model) {
                 <tr>
