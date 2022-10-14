@@ -37,4 +37,7 @@ namespace PruebaPart1.Models
 
         public string Genero{ get; set; }   
     }
+
+
+
 }
