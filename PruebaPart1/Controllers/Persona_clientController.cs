@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
 using PruebaPart1.Data;
 using PruebaPart1.Models;
@@ -13,6 +14,8 @@ namespace PruebaPart1.Controllers
     public class Persona_clientController : Controller
     {
         private readonly AppDBContex _context;
+
+        Persona_client p = new Persona_client();
 
         public Persona_clientController(AppDBContex context)
         {
@@ -179,5 +182,28 @@ namespace PruebaPart1.Controllers
         {
           return _context.Persona_cliente.Any(e => e.Id == id);
         }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+
+        public void CreateFolder()
+        {
+
+            String nombreArchivo = "DB.txt";
+            String ruta = @"C:\Users\alex2\Desktop\BI HOY\" + nombreArchivo;
+
+            
+
+            using (StreamWriter sw = new StreamWriter("DB.txt"))
+            {
+                sw.WriteLine("Documento" + "" + "PrimerNombre" + "" + "SegundoNombre" + "" + "PrimerApellido");
+                sw.WriteLine(p.Documento + ""+ p.primerNombre+ ""+ p.segundoNombre+""+p.primerApellido);
+            }
+
+            //end method
+        }
+
     }
 }

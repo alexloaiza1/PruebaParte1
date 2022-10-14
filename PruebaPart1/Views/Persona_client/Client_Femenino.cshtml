@@ -55,11 +55,12 @@
     <tbody>
         <p>
             <h1>  Solo puedes ver resultados si tienes mas de 10 personas registradas  </h1>
+
         </p>
 
         @foreach (var item in Model)
         {
-            @if (cantlista.Count > 2)
+            @if (cantlista.Count > 10)
             {
                 @if (item.Genero == "Femenino")
                 {
