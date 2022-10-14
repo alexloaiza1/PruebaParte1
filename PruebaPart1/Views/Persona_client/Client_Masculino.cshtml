@@ -1,0 +1,124 @@
+﻿@model IEnumerable<PruebaPart1.Models.Persona_client>
+
+
+
+
+
+@{
+    ViewData["Title"] = "Client_Masculino";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var cantlista = (ICollection<Persona_client>)Model;
+    var cantMasculino=0;
+}
+
+
+
+<h1 style="text-align:center">Lista clientes masculinos</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.primerNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.segundoNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.primerApellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.segundoApellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Edad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genero)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <p>
+            <h4  style="color:crimson">  Recuerda que solo puedes ver resultados si tienes mas de 10 personas registradas  </h4>
+        </p>
+        
+        @foreach (var item in Model)
+        {
+            @if(cantlista.Count>2){
+                @if (item.Genero == "Masculino")
+                {
+                    cantMasculino++;
+
+
+                  
+                    
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Documento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.primerNombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.segundoNombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.primerApellido)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.segundoApellido)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefono)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Direccion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Edad)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Genero)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            }
+
+
+           
+
+
+        }
+
+        <div>
+            <h4> La cantidad de registros con genero masculino encontrados son: @cantMasculino y estan listados a continuacion</h4>
+        </div>
+
+        <div class="mt-3">
+            <a asp-action="Index">Volver a atrás</a>
+        </div>
+    </tbody>
+</table>

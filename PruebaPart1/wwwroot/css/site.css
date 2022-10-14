@@ -16,3 +16,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.fondito {
+    border-right: solid 1px rgb(99, 66, 6);
+    
+}
+
+.subrayado{
+    text-decoration:none;
+}
